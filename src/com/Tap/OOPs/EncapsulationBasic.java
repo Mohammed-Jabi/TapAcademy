@@ -1,28 +1,27 @@
 package com.Tap.OOPs;
 
-class Bamk{
-	private static int balance;
-	static void getMethod(int x)
-	{
-		if(x>=0)
-		{
-			balance = x;
+import java.util.Scanner;
+
+class Bank{
+	private float bal;
+	
+	public void setData(float x) {
+		if(x>0) {
+			bal = x;
 		}
-		System.out.println(balance);
-		System.exit(0);
 	}
-	static void setMethod()
-	{
-		
+	public float getData() {
+		return bal;
 	}
 }
-
-public class EncapsulationBasic {
-
-	public static void main(String[] args) {
+//Error
+class Encapsulation{
+	public static void main(String args[]) {
 		
-		
-
+		Bank ba = new Bank();
+		Scanner scan = new Scanner(System.in);
+		float x = scan.nextFloat();
+		ba.setData(x);
+		System.out.println(ba.getData());
 	}
-
 }
