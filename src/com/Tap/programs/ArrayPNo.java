@@ -8,8 +8,8 @@ public class ArrayPNo {
 		
 		int ar[]= new int[n]; 
 		for(int i=0; i<ar.length; i++) {
-		ar[i]=i+1;
-		System.out.print(ar[i]+" ");
+	
+		System.out.println(ar[i]= i+1 );
 		}
 	//
 }	
