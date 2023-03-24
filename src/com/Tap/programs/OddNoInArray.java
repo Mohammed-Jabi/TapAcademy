@@ -12,7 +12,7 @@ public class OddNoInArray {
 		for(int i=0; i<ar.length; i++) {
 			ar[i]=scan.nextInt();
 		}
-		for(int i=0; i<ar.length; i++) {
+		for(int i=0; i<ar.length-1; i++) {
 			if(ar[i]%2!=0) {
 				System.out.print(ar[i]+" ");
 			}
