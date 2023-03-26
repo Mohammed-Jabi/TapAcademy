@@ -2,30 +2,30 @@ package com.Tap.programs;
 
 import java.util.Scanner;
 
-public class LargestEleArray {
-
+public class Ins0inEvenArray {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
-		largestNo(n);
+		replaceEven(n);
 
 	}
 
-	static void largestNo(int n) {
+	static void replaceEven(int n) {
 
 		Scanner scan = new Scanner(System.in);
 		int a[] = new int[n];
 		for(int i=0; i<a.length; i++) {
 			a[i] = scan.nextInt(); 
 		}
-		int larger=a[0];
-		for(int i=0; i<a.length; i++)  {
-			if(a[i]>larger) {
-				larger=a[i];
+
+		for(int i=0; i<a.length; i++) {
+			if(a[i]%2==0) {
+				a[i]=0;
 			}
+			System.out.print(a[i]+" ");
 		}
-		System.out.println(larger);
+		
 	}
 
 }
