@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Bank{
 	private float bal;
-	
+
 	public void setData(float x) {
 		if(x>0) {
 			bal = x;
@@ -17,7 +17,7 @@ class Bank{
 //Error
 class Encapsulation{
 	public static void main(String args[]) {
-		
+
 		Bank ba = new Bank();
 		Scanner scan = new Scanner(System.in);
 		float x = scan.nextFloat();
