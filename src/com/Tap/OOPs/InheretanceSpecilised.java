@@ -1,6 +1,6 @@
 package com.Tap.OOPs;
 
- class Paresnts{
+class Paresnts1{
 	
 	void height() {
 		System.out.println("Tall");
@@ -16,35 +16,38 @@ package com.Tap.OOPs;
 	}
 }
 
-class Child1 extends Paresnts{
+class Ch1 extends Paresnts{
 	
 	void hairColor(){
 		System.out.println("Blond");
 	}
-	
-}
-
-class Child2 extends Paresnts{
-	
-	void hairColor() {
-		System.out.println("Broun");
+	void swim() {
+		System.out.println("Ch1 can swim");
 	}
 	
 }
 
-public class InheritanceOveriding {
+class Ch2 extends Paresnts{
+	
+	void hairColor() {
+		System.out.println("Broun");
+	}
+	void horseRide(){
+		System.out.println("Ch2 can ride a horse");
+	}
+	
+}
+public class InheretanceSpecilised {
 
 	public static void main(String[] args) {
-		
-		Child1 c1 = new Child1();
-		Child2 c2 = new Child2();
-		Paresnts p = new Paresnts();
-		
-		p.hairColor();
-		c1.hairColor();
-		c2.hairColor();
-		
 
+		Ch1 c1 = new Ch1();
+		Ch2 c2 = new Ch2();
+		Paresnts1 p = new Paresnts1();
+		
+		c1.swim();
+		c2.horseRide();
+		
 	}
 
 }
