@@ -73,16 +73,11 @@ public class Abstraction {
 		CargoPlain cp = new CargoPlain();
 		PasengerPlain pp = new PasengerPlain();
 		FighterPlain fp = new FighterPlain();
-
-		cp.takeOff();
-		cp.fly();
-		cp.land();
-		pp.takeOff();
-		pp.fly();
-		pp.land();
-		fp.takeOff();
-		fp.fly();
-		fp.land();
+		Airport1 ap = new Airport1();
+		
+		ap.permit(cp);
+		ap.permit(fp);
+		ap.permit(fp);
 
 	}
 
