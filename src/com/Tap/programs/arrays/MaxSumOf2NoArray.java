@@ -2,7 +2,7 @@ package com.Tap.programs.arrays;
 
 import java.util.Scanner;
 
-public class MaxProductFrom2NoArray {
+public class MaxSumOf2NoArray {
 	
 	public static void main(String[] args) {
 
@@ -35,7 +35,7 @@ public class MaxProductFrom2NoArray {
 				smax=a[i];
 			}
 		}
-		int res1 = larger *  smax;
+		int res1 = larger +  smax;
 //		for(int i=0; i<a.length; i++)  {
 //			if(a[i]<smallest) {
 //				smallest=a[i];
@@ -50,7 +50,7 @@ public class MaxProductFrom2NoArray {
 				sSmal=a[i];
 			}
 		}
-		int res2 = smallest * sSmal;
+		int res2 = smallest + sSmal;
 		if(res1>res2) {
 			System.out.println(res1);
 		}
