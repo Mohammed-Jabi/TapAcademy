@@ -2,7 +2,7 @@ package com.Tap.programs.arrays;
 
 import java.util.Scanner;
 
-public class ConSubArraysInArray {
+public class LongestIncSubArray {
 
 	public static void main(String[] args) {
 
@@ -13,36 +13,40 @@ public class ConSubArraysInArray {
 			a[i]=scan.nextInt();
 		}
 
-		pNoOfSubArrays(a);
+		longestSubArray(a);
 
 	}
 
-	static void pNoOfSubArrays(int[] a) {
+	static void longestSubArray(int[] a) {
 
-		int si=0, ei=0;
+		int si=0, ei=0, start=0, end=0;
 		for(int i=0; i<a.length-1; i++) {
 			if(a[i]==a[i+1]-1) {
 				ei++;
 			}
 			else {
-				if(ei-si >0) {
-					for(int j=si; j<=ei; j++) {
+				if(ei-si > end-start) {
+					start=si;
+					end=ei;
+					for(int j=start; j<=end; j++) {
 						System.out.print(a[j]+ " ");
 					}
-					System.out.println();
+					ei=i+1;
+					si=i+1;
 				}
-				ei=i+1;
-				si=i+1;
+				
+			}
+		}
+		
+		if(ei-si > end-start) {
+			start=si;
+			end=ei;
+			for(int j=start; j<=end; j++) {
+				System.out.println(a[j]+ " ");
 			}
 		}
 
-		if(ei-si >0) {
-			for(int j=si; j<=ei; j++) {
-				System.out.print(a[j]+ " ");
-			}
-			System.out.println();
-		}
-
-	}
+	}//Error in program
 
 }
+
