@@ -9,12 +9,19 @@ public class RemoveSpecialCharString {
 		Scanner scan = new Scanner(System.in);
 		String s = scan.nextLine();
 
-		noOfVovels(s);
+		noSpecialChar(s);
 
-//incomplete program
+
 	}
 
-	private static void noOfVovels(String s) {
-
+	private static void noSpecialChar(String s) {
+		String t="";
+		for(int i=0; i<s.length(); i++) {
+			char ch=s.charAt(i);
+			if(ch>='a' && ch<='z' || ch>='A' && ch<='Z' || ch>='0' && ch<='9') {
+				t=t+s.charAt(i);
+			}
+		}
+		System.out.println(t);
 	}
 }
