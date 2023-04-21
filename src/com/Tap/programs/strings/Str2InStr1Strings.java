@@ -2,7 +2,7 @@ package com.Tap.programs.strings;
 
 import java.util.Scanner;
 
-public class RemConMulNoString {
+public class Str2InStr1Strings {
 	
 	public static void main(String[] args) {
 
