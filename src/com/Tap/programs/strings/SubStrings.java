@@ -16,7 +16,11 @@ public class SubStrings {
 	static void subString(String s, int n) {
 	
 		for(int i=0; i<=s.length()-n; i++) {
-			
+			String t="";
+			for(int j=i; j<n+i; j++) {
+				t=t+s.charAt(j);
+			}
+			System.out.println(t);
 		}
 		
 	}
