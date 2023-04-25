@@ -23,6 +23,7 @@ public class AllSubStrings {
 				}
 				System.out.println(t);
 			}
+		
 		}
 		
 	}

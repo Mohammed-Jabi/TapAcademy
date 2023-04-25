@@ -8,14 +8,14 @@ public class LargestPalindromeSubString {
 
 		Scanner scan = new Scanner(System.in);
 		String s = scan.nextLine();
-		allAubStringPalindrom(s);
+		largestSubStringPalindrom(s);
 
 
 	}
 
-	static void allAubStringPalindrom(String s) {
+	static void largestSubStringPalindrom(String s) {
 
-		for(int i=s.length(); i>0; i++) {
+		for(int i=s.length(); i>0; i--) {
 			for(int j=0; j<=s.length()-i; j++) {
 				String t = "";
 				for(int k=j; k<i+j; k++) {
@@ -23,12 +23,16 @@ public class LargestPalindromeSubString {
 				}
 				if(palindrome(t)) {
 					System.out.println(t);
-					return;	
+					return;
 				}
 			}
+
 		}
 
 	}
+
+
+
 
 
 	static boolean palindrome(String t) {
