@@ -26,7 +26,7 @@ public class SwapingArrayIndex {
 				System.out.print(a[i]+" ");
 			}
 		}
-		System.out.println("");
+		System.out.println();
 		System.out.println("Odd index elements:");
 			
 		for(int i=0; i<a.length; i++) {
@@ -34,7 +34,7 @@ public class SwapingArrayIndex {
 					System.out.print(a[i]+" ");
 				}
 			}
-			
+			System.out.println();
 			System.out.println("After Swaping");
 			System.out.println("Even index elements:");
 			for(int i=0; i<a.length; i++) {
@@ -42,7 +42,7 @@ public class SwapingArrayIndex {
 					System.out.print(i%2!=0 + (a[i]));
 				}
 			}
-			System.out.println("");
+			System.out.println();
 			System.out.println("Odd index elements:");
 				for(int i=0; i<a.length; i++) {
 					if(i%2!=0) {

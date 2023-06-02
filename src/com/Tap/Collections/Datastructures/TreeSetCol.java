@@ -1,19 +1,20 @@
- package com.Tap.Collections.Datastructures;
+package com.Tap.Collections.Datastructures;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.TreeSet;
 
-class Employee1{
+class Employee2 implements Comparable<Employee2>{
 	private int id;
 	private String name;
 	private String email;
 	private float salary;
 
-	public Employee1() {
+	public Employee2() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee1(int id, String name, String email, float salary) {
+	public Employee2(int id, String name, String email, float salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -49,17 +50,29 @@ class Employee1{
 	public void setSalary(float salary) {
 		this.salary = salary;
 	}
+	 
+
+	@Override
+	public int compareTo(Employee2 e1) {
+		Employee2 e2 = this; 
+		
+		Float salary1 = e2.getSalary();
+		float salary2 = e1.getSalary();
+		
+		return salary1.compareTo(salary2);
+		
+	}
 
 
 
 
 }
 
-public class Employee {
+public class TreeSetCol {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);	
-		ArrayList<Employee1> list =	new ArrayList<Employee1>();
+		TreeSet<Employee2> list =	new TreeSet<Employee2>();
 		int n = scan.nextInt();
 
 		for(int i=0; i<n; i++) {
@@ -68,12 +81,12 @@ public class Employee {
 			String name = scan.next();
 			String email = scan.next();
 			float salary = scan.nextFloat();
-			Employee1 e = new Employee1(id, name, email, salary);
+			Employee2 e = new Employee2(id, name, email, salary);
 			list.add(e);
 
 		}
 		
-		for(Employee1 e : list) {
+		for(Employee2 e : list) {
 			System.out.println(e.getId() +","+ e.getName() +","+ e.getEmail() +","+ e.getSalary());
 		}
 

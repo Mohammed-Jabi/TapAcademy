@@ -3,7 +3,7 @@ package com.Tap.Collections;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
-public class xyz {
+public class RemovingDuplicateChar {
 
 	public static void main(String[] args) {
 		
