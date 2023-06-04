@@ -21,6 +21,22 @@ class MyCompare1 implements Comparator<String>{
 
 }
 
+class MyCompare2 implements Comparator<String>{
+
+	@Override
+	public int compare(String o1, String o2) {
+		Integer l1 = o1.length();
+		Integer l2 = o2.length();
+		
+		if(l1.compareTo(l2)==0) {
+			return o1.compareTo(o2);
+		}
+		
+		return l1.compareTo(l2) ;
+	}
+
+}
+
 
 public class DecendingTreeSet {
 
@@ -39,6 +55,7 @@ public class DecendingTreeSet {
 
 			System.out.println(x);
 		}
+		System.out.println();
 
 		MyCompare1 com= new MyCompare1();
 		TreeSet<String> sets	= new TreeSet<String>(com);
@@ -55,6 +72,26 @@ public class DecendingTreeSet {
 
 			System.out.println(x);
 		}
+		
+		System.out.println();
+		
+		MyCompare2 co= new MyCompare2();
+		TreeSet<String> sets1	= new TreeSet<String>(co);
+
+		sets1.add("Apple");
+		sets1.add("Mango");
+		sets1.add("Bat");
+		sets1.add("Apple");
+		sets1.add("Rat");
+		sets1.add("Zebra");
+		sets1.add("Voilet");
+
+		for(String x:sets1) {
+			
+			System.out.println(x);
+		}
+		
+		
 
 	}
 
