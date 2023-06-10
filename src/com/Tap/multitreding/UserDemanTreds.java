@@ -61,6 +61,7 @@ class Threds extends Thread{
 		public static void main(String[] args) {
 			
 			System.out.println("Main Started");
+			System.out.println("Main Stoped");
 
 			Threds t1 = new Threds();
 			Threds t2 = new Threds();
@@ -77,7 +78,6 @@ class Threds extends Thread{
 			t2.start();
 			t3.start();
 
-			System.out.println("Main Stoped");
 		}
 
 	}

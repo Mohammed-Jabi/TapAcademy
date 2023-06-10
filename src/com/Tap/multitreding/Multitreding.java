@@ -55,7 +55,10 @@ class Addition implements Runnable{
 
 public class Multitreding {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.out.println("Main Started");
+
 		
 		PrintNumbers p1=new PrintNumbers();
 		PrintAlphabets p2 =new PrintAlphabets();
@@ -68,6 +71,12 @@ public class Multitreding {
 		t1.start();
 		t2.start();
 		t3.start();
+		
+		t3.join();
+		t2.join();
+		t1.join();
+
+		System.out.println("Main Stoped");
 	}
 
 }
