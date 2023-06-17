@@ -1,5 +1,16 @@
 package com.Tap.Revision.Arrays;
 
+class ArrayElementLength {
+    public static void main(String[] args) {
+        String[] array = {"Hello", "World", "Java"};
+
+        for (String element : array) {
+            int length = element.length();
+            System.out.println("Length of \"" + element + "\" is " + length);
+        }
+    }
+}
+
 public class Rev {
 
 	public static void main(String[] args) {
